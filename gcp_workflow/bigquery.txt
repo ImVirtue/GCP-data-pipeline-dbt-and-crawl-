@@ -1,0 +1,15 @@
++ Using BigQuery as a Data Warehouse
++ The structure (Schema and table) of BigQuery:
+    + Glamira_dataset:
+        + raw layer (tables) (more detailed in raw_layer.png in docs folder):
+            - raw_glamira 
+            - raw_ip2location
+            - raw_prod_information 
+        + transformed layer (tables) using DBT (more detailed in transformed_layer.png in docs folder):
+            - fact_sales
+            - dim_date
+            - dim_location
+            - dim_customer
+            - dim_option
+            - dim_product
+            

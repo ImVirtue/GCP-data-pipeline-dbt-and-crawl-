@@ -1,0 +1,6 @@
++ Using GCS Bucket as a Datalake to store data 
++ The structure of GCS bucket:
+    + raw_prod_information.csv
+    + ip2location.csv
+    + seprated_files:
+        + over 500 files .json (each file has 80k records)

@@ -1,0 +1,94 @@
+
+version: 2
+
+models:
+  - name: fact_sales
+    description: "To create fact_sales table"
+    columns:
+      - name: sales_order_line_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+      
+      - name: sales_order_id
+      - name: device_id
+      - name: location_key
+      - name: product_id
+      - name: option_id
+      - name: customer_key
+      - name: order_time
+      - name: unit_quantity
+      - name: price
+      - name: currency
+      - name: sales_order_id
+
+models:
+  - name: dim_product
+    description: "To create fact_sales table"
+    columns:
+      - name: product_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+      - name: product_name
+      - name: product_type
+      - name: product_gender
+
+
+models:
+  - name: dim_location
+    description: "To create fact_sales table"
+    columns:
+      - name: location_key
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+      - name: country
+      - name: city
+
+models:
+  - name: dim_customer
+    description: "To create fact_sales table"
+    columns:
+      - name: customer_key
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+      - name: customer_email
+      - name: customer_access_ip
+
+models:
+  - name: dim_option
+    description: "To create fact_sales table"
+    columns:
+      - name: option_id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+      - name: option_value
+
+models:
+  - name: dim_date
+    description: "To create fact_sales table"
+    columns:
+      - name: full_date
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+      - name: day_of_week
+      - name: is_weekend
+      - name: day_of_month
+      - name: month
+      - name: day_of_the_year
+      - name: week_of_the_year
+      - name: quater
+      - name: year 
+      
+sources:
+  - name: glamira_db # chi la de tham chieu khi compile model 
+    database: tuan-duc-glamira
+    schema: glamira_dataset
+    tables:
+      - name: raw_prod_information
+      - name: raw_glamira
+      - name: raw_ip2location
