@@ -3,9 +3,9 @@ PROJECT NAME: BUILDING DATA PIPELINE (GLAMIRA WEBSITE) FOR ANALYTICAL PURPOSES
 + Main pipeline's workflow (main_workflow.png in docs folder):
     + Receive a bson file that has 41 records of user behavior (.bson file)
     + Store data in mongoDB (VM instance)
-    + Crawl product data from url that is attached in .bson file
-    + Using file ipToLocation to extract customer's location in .bson file
-    + Build a Datalake (GCS bucket):
+    + Crawl product data from URL that is attached to the .bson file
+    + Using file ipToLocation to extract the customer's location in .bson file
+    + Build a Data lake (GCS bucket):
         + Store raw data files (.csv and .jsonl)
     + Build Data Warehouse (Bigquery):
         + Raw layer
