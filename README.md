@@ -1,6 +1,6 @@
-PROJECT NAME: BUILDING DATA PIPELINE (GLAMIRA WEBSITE) FOR ANALYTICAL PURPOSES
+## PROJECT NAME: BUILDING DATA PIPELINE (GLAMIRA WEBSITE) FOR ANALYTICAL PURPOSES
 
-+ Main pipeline's workflow (main_workflow.png in docs folder):
+## Main pipeline's workflow (main_workflow.png in docs folder):
     + Receive a bson file that has 41 records of user behaviour (.bson file)
     + Store data in mongoDB (VM instance)
     + Crawl product data from the URL that is attached to the .bson file
@@ -14,7 +14,13 @@ PROJECT NAME: BUILDING DATA PIPELINE (GLAMIRA WEBSITE) FOR ANALYTICAL PURPOSES
         + Generate insightful data from Data Warehouse
 
 
-Structure of this project:
+## Structure of this project:
+    └───source
+        ├───database
+        │   └───mongodb
+        ├───ecom_api
+        ├───message_queue
+        └───restful_api
 project/
     │
     ├── crawl_data/
